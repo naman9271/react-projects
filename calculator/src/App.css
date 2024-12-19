@@ -1,0 +1,46 @@
+* {
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background:linear-gradient(to right , #00AAFF,#00ff6c);
+}
+.App{
+  display: grid;
+  grid-template-columns: repeat(4,6rem);
+  justify-content: center;
+  grid-template-rows: minmax(7rem,auto) repeat(5,6rem);
+}
+.Span-two{
+  grid-column: span 2;
+}
+.output{
+  grid-column:  1 /-1;
+  background-color:rgba(0,0,0,.75);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  /* word-wrap: break-word;
+  word-break: break-all; */
+}
+button{
+  cursor: pointer;
+  border: 1px solid white;
+  font-size: 2rem;
+  outline: none;
+  background-color: rgba(225,225,225,.75);
+}
+button:hover , button:focus{
+  background-color: rgba(225,225,225);
+}
+.output .previous-operand{
+  color: rgba(225,225,225,.75);
+  font-size: 1.5rem;
+}
+.output .current-operand{
+  color: white;
+  font-size: 2.5rem;
+}
