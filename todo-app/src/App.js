@@ -1,40 +1,53 @@
-import { useState } from 'react';
-import './App.css';
-import AddTodo from './components/AddTodo';
-import TodoList from "./components/TodoList"
+import "./App.css"
+import {useState} from "react"
+import TodoList from "./components/TodoList";
+import AddTodo from "./components/AddTodo";
 
-function App() {
-const [todo,setTodo] = useState([]);
+function App(){
+  let task=[{
+    name:"html",
+    done:false,
+    id:1,
+  },{
+    name:"css",
+    done:false,
+    id:2,
+  },{
+    name:"js",
+    done:false,
+    id:3,
+  }];
 
-function addTodo(toname){
-  if(todo.includes(toname)){
-    alert("This Task Already exists....");
-  }else{
-    setTodo(...todo,toname);
-    console.log(todo);
+  //reset all
+  //edit
+  //add
+  //delete
+  //task completed
+
+  const [todo,setTodo] =useState(task);
+
+  function AddTodolist(toname){
+    if(todo.includes(toname)){
+      alert("task already exists...")
+    }
+    setTodo([...todo,toname]);
   }
-}
-function editTodo(toname){
+  function deleteTodo(index){
+    
+  }
+  function editTodo(index){
 
-}
-function deleteTodo(del){
-  const index = todo.find(del);
-  let newTodo = [...todo];
-  setTodo(newTodo.splice(index,1));
-//del=array element name to be get deleted
+  }
+  function resetAll(){
+    
+  }
 
-}
-
-  return (
+  return(
     <div className="App">
-      <h1>Todo List</h1>
-      <AddTodo addTodo={addTodo} editTodo={editTodo}></AddTodo>
-      {todo.map((element) => {
-        <TodoList todolist={element} deleteTodo={deleteTodo}></TodoList>
-        
-      })}
+      <h1>Todo App</h1>
+      <AddTodo AddTodolist={AddTodolist}></AddTodo>
+      <TodoList todo={todo} deleteTodo={deleteTodo} editTodo={editTodo}></TodoList>
     </div>
-  );
+  )
 }
-
 export default App;

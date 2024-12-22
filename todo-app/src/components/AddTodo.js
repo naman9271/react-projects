@@ -1,13 +1,16 @@
-export default function AddTodo({addTodo}){
+export default function AddTodo({AddTodolist}){
+    function handleChange(e){
+        let toname=e.target.value;
+    }
     function handleSubmit(e){
-        e.preventDefault();
-        let toname=e.target.toname.value;
-        addTodo(toname);
+        // AddTodolist(toname);
     }
     return(
-        <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Enter The task" name="toname"></input>
-        <button >Save</button>
-      </form>
+        <>
+        <form>
+            <input onChange={handleChange} type="text" placeholder="Enter The Task"></input>
+            <button onClick={handleSubmit}>Add</button>
+        </form>
+        </>
     )
 }
