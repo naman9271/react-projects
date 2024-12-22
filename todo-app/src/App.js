@@ -19,7 +19,7 @@ function App(){
   // }];
 
   //edit
-
+  // aur isko use Effect be bina bhi kr skte hai and use reference hook se bnhi bhut easily kr skte hai
   //have to practice more about the edit and add functionality an dthink abut teh more optimized solution
 
   const [todo,setTodo] =useState([]);
