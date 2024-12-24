@@ -18,7 +18,10 @@ function App(){
   //   id:3,
   // }];
 
-  //edit
+  //up down feature bhi add kro 
+  // and css daalni hai 
+  //
+  //
   // aur isko use Effect be bina bhi kr skte hai and use reference hook se bnhi bhut easily kr skte hai
   //have to practice more about the edit and add functionality an dthink abut teh more optimized solution
 
