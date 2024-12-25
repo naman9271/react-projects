@@ -1,7 +1,5 @@
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import Interests from "./components/Interests";
-import Skills from "./components/Skills";
+import Data from "./sections/Data";
+import Dropdown from "./components/dropdown";
 
 function App() {
 
@@ -22,17 +20,11 @@ function App() {
     }
   return (
     <div className="App">
-     <h1>Resume Builder</h1>
+     {/* <Dropdown></Dropdown> */}
+     {/* <h1>Resume Builder</h1>
      <hr/>
-     <Experience resume={resume}/>
-     <hr/>
-     <Education resume={resume}/>
-     <hr/>
-     <Skills resume={resume}/>
-     <hr/>
-     <Interests resume={resume}/>
-     <hr/>
-     <button onClick={()=>window.print()}>Print Resume</button>
+     <Data resume={resume}/>
+     <button onClick={()=>window.print()}>Print Resume</button> */}
     </div>
   );
 }
