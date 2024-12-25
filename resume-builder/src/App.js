@@ -5,11 +5,20 @@ import Skills from "./components/Skills";
 
 function App() {
 
+//dropdown jisme poochega ki konsi value add krni hai phirun 4 option ke basis pr forms aa jayenge
+//
+//
+//
+//
+//
+//
+
+
   let resume = {
     experience : [ { year:2012, company:'xyz', role:'something' },{ year:2012, company:'xyz', role:'something' }],
-    education:[ ],
+    education:[ {institute:"abc",year:"2020",grade:"8.96"}],
     skills : [ 'react js', 'node js'],
-    interests:[],
+    interests:['chess','coding'],
     }
   return (
     <div className="App">
@@ -23,7 +32,7 @@ function App() {
      <hr/>
      <Interests resume={resume}/>
      <hr/>
-
+     <button onClick={()=>window.print()}>Print Resume</button>
     </div>
   );
 }
