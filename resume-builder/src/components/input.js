@@ -1,16 +1,17 @@
 import React from 'react'
 
-function Input() {
+function Input({toSearch}) {
     function handleChange(e){
         e.preventDefault();
-        
+        let search = e.target.value;
+        console.log(search);
+        toSearch(search);
     }
   return (
     <div>
         <form>
             <input
             name="name"
-            value=""
             placeholder="Search Item"
             onChange={handleChange}
             />

@@ -1,5 +1,6 @@
 import Data from "./sections/Data";
 import Dropdown from "./components/dropdown";
+import List from "./components/list"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     }
   return (
     <div className="App">
+      <List></List>
      {/* <Dropdown></Dropdown> */}
      {/* <h1>Resume Builder</h1>
      <hr/>
