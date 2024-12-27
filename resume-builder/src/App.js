@@ -21,7 +21,7 @@ function App() {
     }
   return (
     <div className="App">
-      <List></List>
+      {/* <List></List> */}
      {/* <Dropdown></Dropdown> */}
      {/* <h1>Resume Builder</h1>
      <hr/>
