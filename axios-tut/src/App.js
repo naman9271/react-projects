@@ -18,7 +18,7 @@ function App() {
       // let cancel;
       axios.get(currentPage,
         // {cancelToken : new axios.cancelToken(c=>cancel=c)}
-      ).then(res=>{
+      ).then(res=>{ //axios always return a promise as it send the request
         setLoading(false)
         setPrevPage(res.data.previous);
         setNextPage(res.data.next);
