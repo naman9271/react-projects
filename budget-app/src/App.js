@@ -7,11 +7,11 @@ import AddExpenseModal from "./components/addExpenseModal";
 import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
 import TotalBudgetCard from "./components/TotalBudgetCard";
 import ViewExpenseModal from "./components/ViewExpenseModal";
+
 //local storage 
-//total mai max amount atring ki tarah add ho rha hai
-//viewExpenses kaam nhi kr rha 
-//view Expenses
-// also deleteBudget mai uncategorised mai add krna ia also a task 
+//aur ek reset button bhi bnana padega jo sb kuch del krde
+
+
 function App() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
   const [showAddExpenseModal, setShowAddExpenseModal] = useState(false)
@@ -72,6 +72,7 @@ function App() {
 
       <ViewExpenseModal
         show={viewExpenseModalBudgetId}
+        budgetId={viewExpenseModalBudgetId}
         handleClose={() => { setViewExpenseModalBudgetId() }}>
       </ViewExpenseModal>
     </>
